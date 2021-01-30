@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css?family=Baloo+2|Nunito|Roboto+Condensed&display=swap" rel="stylesheet">
+      <title>Simulasi Kredit Rumah</title>
+  </head>
+  <body>
+    <div id="form">
+      <h2>Isi Data di bawah ini untuk menghitung simulasi kredit</h2>
+      <form id="my-form" class="form-cicilan">
+        <label>Lama Kredit</label><br>
+        <select id="durasi">
+            <option value="12">12 Bulan</option>
+            <option value="18">18 Bulan</option>
+            <option value="24">24 Bulan</option>
+        </select><br>
+        <label>Tipe Rumah</label><br>
+        <select id="tipe">
+            <option value="Rose">Rose 120.000.000</option>
+            <option value="Gold">Gold 300.000.000</option>
+            <option value="Platinum">Platinum 360.000.000</option>
+        </select><br>
+        <button id='submit' type="button" class="submit">Hitung</button>
+      </form>
+      <div class="tipeRumah"><p></p>
+      </div>
+      <div class='harga'>
+        <p></p>
+      </div>
+      <div class='dp'>
+        <p></p>
+      </div>
+      <div class='remain'>
+        <p></p>
+      </div>
+      <div class='duration'>
+        <p></p>
+      </div>
+      <div class='payment'>
+        <p></p>
+      </div>
+      <div>
+        <p id="text"></p>
+      </div>
+      <div id='table'>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

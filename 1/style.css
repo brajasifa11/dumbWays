@@ -1,0 +1,33 @@
+body {
+  background-color: #f0f4e8;
+}
+
+#form {
+  height: auto;
+  border-radius: 50px;
+  margin: 35px 25%;
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  font-family: "Baloo 2", cursive;
+}
+
+.submit {
+  margin-top: 10px;
+  border-radius: 15px;
+  background-color: lightblue;
+  height: 30px;
+  width: 100px;
+}
+
+.form-cicilan label {
+  margin: 10px;
+}
+
+#table {
+  padding-left: 34%;
+}
+
+#text {
+  text-align: center;
+}

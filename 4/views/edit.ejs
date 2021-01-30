@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/home">School App</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="/home">Home</a>
+          <a class="nav-link" href="/add">Tambah data sekolah</a>
+          <a class="nav-link active" aria-current="page" href="/school">Daftar Sekolah</a>
+          <a class="nav-link active" aria-current="page" href="/logout">Logout</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>Edit Data Sekolah</h1>
+      <form action="/edit/<%= school.id %>" method="POST">
+        <div class="mb-3">
+          <label for="npsn" class="form-label">NPSN</label>
+          <input value="<%= school.NPSN%>" required type="text" class="form-control" id="npsn" name="npsn" aria-describedby="emailHelp">
+        </div>
+        <div class="mb-3">
+          <label for="name" class="form-label">Nama Sekolah</label>
+          <input value="<%= school.name_school %>" required type="text" class="form-control" id="name" name="name">
+        </div>
+        <div class="mb-3">
+          <label for="address" class="form-label">Alamat</label>
+          <input value="<%= school.address %>" required type="text" class="form-control" id="address" name="address">
+        </div>
+        <div class="mb-3">
+          <label for="level" class="form-label">Jenjang Sekolah</label>
+          <input value="<%= school.school_level %>" required type="text" class="form-control" id="level" name="level">
+        </div>
+        <div class="mb-3">
+          <label for="status" class="form-label">Status</label>
+          <input value="<%= school.status_school %>" required type="text" class="form-control" id="status" name="status">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+  </div>
+</body>
+</html>

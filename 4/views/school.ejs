@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/home">School App</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="/home">Home</a>
+          <a class="nav-link" href="/add">Tambah data sekolah</a>
+          <a class="nav-link active" aria-current="page" href="/school">Daftar Sekolah</a>
+          <a class="nav-link active" aria-current="page" href="/logout">Logout</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <h1>Daftar Sekolah</h1>
+    <% if(schools.length) {%>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">NPSN</th>
+            <th scope="col">Nama Sekolah</th>
+            <th scope="col">Alamat</th>
+            <th scope="col">Jenjang Sekolah</th>
+            <th scope="col">Status</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%for(let i = 0; i < schools.length; i++) {%>
+            <tr>
+              <td><%= schools[i].NPSN %></td>
+              <td><%= schools[i].name_school %></td>
+              <td><%= schools[i].address %></td>
+              <td><%= schools[i].school_level %></td>
+              <td><%= schools[i].status_school %></td>
+              <td>
+                <a type="button" class="btn btn-success" href="/edit/<%= schools[i].id %>">Edit</a>
+                <a type="button" class="btn btn-danger" href="/delete/<%= schools[i].id %>">Delete</a>
+              </td>
+            </tr>
+          <%}%>
+        </tbody>
+      </table>
+    <%}%>
+  </div>
+</body>
+</html>
